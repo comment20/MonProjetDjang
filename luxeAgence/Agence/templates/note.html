@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrez vos notes</title>
+
+</head>
+<body>
+	<h1>Entrez vos notes pour obtenir la prediction  de la serie qui vous convient le mieux</h1>
+	<form action="{% url 'note' %}" method="post">
+        {% csrf_token %}
+        <label for="francais">Français:</label>
+        <input type="number" id="francais" name="francais"><br><br>
+        <label for="histoire_geo">Histoire-Géo:</label>
+        <input type="number" id="histoire_geo" name="histoire_geo"><br><br>
+        <label for="anglais">Anglais:</label>
+        <input type="number" id="anglais" name="anglais"><br><br>
+        <label for="mathematiques">Mathématiques:</label>
+        <input type="number" id="mathematiques" name="mathematiques"><br><br>
+        <label for="physique_chimie">Physique-Chimie:</label>
+        <input type="number" id="physique_chimie" name="physique_chimie"><br><br>
+        <input type="submit" value="Prédire">
+    </form>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+        
+        
+    </style>
+</body>
+</html>

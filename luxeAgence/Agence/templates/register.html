@@ -1,0 +1,51 @@
+{% extends "base.html"%}
+
+{% block contenu%}
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-A">
+            <h3> creer votre compte</h3>
+            <form method="post" action={% url 'register'%}>
+               {% csrf_token %}
+               {{form.as_p}}
+                
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">selectionnez</label>
+                </div>
+                <button type="submit" class="btn btn-primary" >inscrivez-vous</button>
+              <p class="link"> déja inscrit ?<a href="{% url 'login'%}"> se connecter</a></p>
+              </form>
+
+         </div>
+           <style>
+            form{ 
+               width:90%;
+               margin:40px auto;
+               padding:5px;
+               border:1 px solid #ccc;
+               border-radus: 10px;
+               box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            label{ 
+              display:block;
+              margin-bottom: 10 px;
+            }
+            input[type="text"],input[type="email"],
+            input[type="password"]{ 
+               width:100%;
+               height:40px;
+               margin-bottom:20px;
+               padding:10px;
+               border-radus:5px;
+            }
+          </style>
+
+        <div class="col-lg-6"> 
+            <img src=" https://math-info.u-paris.fr/wp-content/uploads/sites/8/2019/01/Etudiants-JPO-768x384.jpg"  alt="mon image">
+
+        </div>
+    </div>
+    
+</div>
+{% endblock%}

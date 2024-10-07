@@ -1,0 +1,56 @@
+{% extends "base.html"%}
+
+{% block contenu%}
+<div class="container">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-A">
+            <h3> connexion</h3>
+            <form method="post" action="{% url 'login' %}">
+              {% csrf_token%}
+             
+                <label for="username">username</label>
+                <input type="text" name="username" required>
+                <label for="prenom">prenom</label>
+                <input type="text" name="prenom" required>
+                <labe for="nom">nom</label>
+                <input type="text" name="prenom" required>
+                <label for="Adress Email">Adress Email</label>
+                <input type="email" name="Adress Email" required>
+                <label for="Mot de passe">Mot de pass</labe>
+                 <input type="password" name="Mot de passe" required>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">selectionnez</label>
+                </div>
+                <button type="submit" class="btn btn-primary">connectez-vous</button>
+              </form>
+         </div>
+
+        <div class="col-lg-6"> 
+            <img src="https://shoppingkim.com/wp-content/uploads/2022/03/gifts-for-college-students-720x405.webp">
+            <style>
+              form{ 
+                 width:90%;
+                 margin:40px auto;
+                 padding:5px;
+                 border:1 px solid #ccc;
+                 border-radus: 10px;
+                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
+              }
+              label{ 
+                display:block;
+                margin-bottom: 10 px;
+              }
+              input[type="text"],input[type="email"],
+              input[type="password"]{ 
+                 width:100%;
+                 height:40px;
+                 margin-bottom:20px;
+                 padding:10px;
+                 border-radus:5px;
+              }
+            </style>
+        </div>
+    </div>
+</div>
+{% endblock%}
