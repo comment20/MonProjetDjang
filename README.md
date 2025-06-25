@@ -7,13 +7,13 @@ Ce projet est une application web développée avec Django permettant de prédir
 - Saisie des notes par matière (français, histoire-géo, anglais, mathématiques, physique-chimie)
 - Prédiction automatique de la série scolaire grâce à un modèle de machine learning
 - Interface d’inscription et de connexion pour les utilisateurs
-- Tableau de bord pour consulter les résultats
+
 
 ## Installation
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/nom-du-repo.git
+    https://github.com/comment20/MonProjetDjang.git 
    ```
 2. Installez les dépendances :
    ```bash
