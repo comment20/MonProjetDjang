@@ -46,7 +46,7 @@ def predict_series(request):
         data = request.POST
         # Charger le modèle et faire la prédiction
         try:
-            model = joblib.load(r"C:\Users\TCHOUPE\Desktop\monprojetdjango\luxeAgence\data\logreg.joblib")
+            model = joblib.load(r"C:\Users\GENIUS ELECTRONICS\Music\MonProjetDjang\luxeAgence\data\logreg.joblib")
             print('le model est bien appeller')
             X = np.array([[
                float(data['francais']),
